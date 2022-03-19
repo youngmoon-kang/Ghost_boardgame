@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/oppositeStateButton"
+        android:layout_width="304dp"
+        android:layout_height="73dp"
+        android:text="Button"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/space3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/space3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/space1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/space1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/space1"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="344dp"
+        android:layout_height="87dp"
+        android:text="Button"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/space2" />
+
+    <LinearLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="6dp">
+
+        <FrameLayout
+            android:id="@+id/opposite_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="15px"></FrameLayout>
+
+        <TableLayout
+            android:id="@+id/board_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10px"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:gravity="center"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <ImageView
+                    android:id='@+id/board_0_0'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board_goal" />
+
+                <ImageView
+                    android:id='@+id/board_0_1'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_0_2'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_0_3'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_0_4'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_0_5'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board_goal" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id='@+id/board_1_0'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_1_1'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_1_2'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_1_3'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_1_4'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_1_5'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id='@+id/board_2_0'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_2_1'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_2_2'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_2_3'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_2_4'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_2_5'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id='@+id/board_3_0'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_3_1'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_3_2'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_3_3'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_3_4'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_3_5'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id='@+id/board_4_0'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_4_1'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_4_2'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_4_3'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_4_4'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_4_5'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id='@+id/board_5_0'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board_goal" />
+
+                <ImageView
+                    android:id='@+id/board_5_1'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_5_2'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_5_3'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_5_4'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board" />
+
+                <ImageView
+                    android:id='@+id/board_5_5'
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="click_board"
+                    app:srcCompat="@drawable/board_goal" />
+            </TableRow>
+        </TableLayout>
+
+        <FrameLayout
+            android:id="@+id/my_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="15px"
+            android:paddingTop="15px"
+            android:paddingRight="15px"
+            android:paddingBottom="80px"></FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/messageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A237E"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#F6F0F0"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="O  K" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A237E"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/exitMessageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="정말 나가겠습니까?"
+            android:textColor="#F6F0F0"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/exitCancelButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:text="취 소" />
+
+            <Button
+                android:id="@+id/exitConfirmButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:text="나가기" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
